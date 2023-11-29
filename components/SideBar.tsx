@@ -6,12 +6,12 @@ import Link from "next/link";
 
 export default function SideBar() {
     const {openSideMenu, documents} = useContext(appContext);
-    const baseClasses = `p-2 min-w-[300px] bg-slate-700 text-white overflow-y-auto transition-all relative`
+    const baseClasses = `h-screen p-2 min-w-[300px] bg-black border-r-[1px] border-solid border-zinc-800 fixed z-30 text-white overflow-y-auto transition-all`
     const showClasses = openSideMenu ? 'ml-0':`ml-[-300px]`;
     const docs = documents.docs;
     return(
-      <aside className={`${baseClasses} ${showClasses}`}>
-        <h1 className="text-slate-300 text-2xl"><Link href={"/"}>Evento de Kafka</Link></h1>
+      <div className={`${baseClasses} ${showClasses}`}>
+        <div className="mt-2 font-semibold text-white text-xl flex justify-center items-center"><Link href={"/"}>Evento de Kafka</Link></div>
         <nav className='m-2'>
           <ul>
            {
@@ -19,6 +19,6 @@ export default function SideBar() {
            }        
           </ul>
         </nav>
-      </aside>
+      </div>
     );
 }

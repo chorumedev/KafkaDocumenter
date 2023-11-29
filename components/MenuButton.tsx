@@ -1,17 +1,19 @@
-import { useContext } from "react";
-import HamburguerIcon from "./HamburguerIcon";
+import React, { useContext } from "react";
 import { appContext } from "@/context/AppContext";
+import HamburguerIcon from "./HamburguerIcon";
 
 export default function MenuButton() {
     const { openSideMenu, toggleSideMenu } = useContext(appContext);
-    const baseClass = 'absolute cursor-pointer w-8 h-8';
-    const appendClass = openSideMenu ? 'bg-slate-700 rounde' : '';
-    return (
-        <>
-            <span onClick={() => { toggleSideMenu(); }} className={`${baseClass} ${appendClass}`}>
-                <HamburguerIcon></HamburguerIcon>
-            </span>
-        </>
+    const baseClass = 'fixed z-50 cursor-pointer w-8 h-8 text-white mt-4 ml-2';
+    const buttonText = openSideMenu ? 'X' : <HamburguerIcon/>;
 
+    const handleMenuToggle = () => {
+        toggleSideMenu();
+    };
+
+    return (
+        <div onClick={handleMenuToggle} className={`${baseClass}`}>
+            {buttonText}
+        </div>
     );
 }

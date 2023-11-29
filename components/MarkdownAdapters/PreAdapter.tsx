@@ -22,5 +22,5 @@ export default function PreAdapter({ element }: {
         return () => window.removeEventListener('resize', handler);
     }, []);
 
-    return showCode ? <pre className="bg-slate-800 block p-2 text-red-200 rounded font-mono mt-5 mb-5 whitespace-pre-wrap" {...element}></pre> : null;
+    return showCode ? <pre className="bg-[#0A0A0A] p-4 block text-white rounded font-mono whitespace-pre-wrap" {...element}></pre> : null;
 }

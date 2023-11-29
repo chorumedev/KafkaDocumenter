@@ -43,6 +43,7 @@ Kafka pode também ser empregado para casos de uso com lotes e também desempenh
 Kafka pode lidar com pipelines de dados em tempo real. Essa característica é um dos principais motivos pelo qual essa tecnologia é escolhida.
 ## **Desvantagens**
 
+
 ### **a) Falta de Ferramentas de Monitoramento**
 
 É notória a ausência de um conjunto completo de ferramentas de gerenciamento e monitoramento. Por isso, equipes de suporte empresarial se sentem receosas ao escolher o Kafka a longo prazo.
@@ -65,7 +66,3 @@ As vezes, apresenta um comportamento desajeitado e lento, quando o número de co
 ### **g) Ausência de Paradigmas de Mensageria**
 
 Alguns dos paradigmas de mensageria estão faltando no Kafka como os de request/reply, consultas point-to-point, entre outros. Não sempre mas para certos casos de uso, isso se torna problemático. 
-
-
-
-

@@ -8,12 +8,13 @@ export default function BlockquoteAdapter({ element }: {
     const { children, ...rest } = element;
 
     return (
-        <blockquote className="bg-slate-700 flex align-middle p-4 rounded-lg mt-5" {...rest}>
-            <span>
-            <ExclamationIcon></ExclamationIcon>
-            </span>
-            <div className="ml-2 flex align-middle justify-center">
-            {children}
+        <blockquote className="bg-[#0A0A0A] p-4 align-middle rounded-lg mb-8" {...rest}>
+            <div>
+                <ExclamationIcon></ExclamationIcon>
             </div>
-            </blockquote>);
+            <div className="flex align-middle justify-center">
+                {children}
+            </div>
+        </blockquote>
+    );
 }

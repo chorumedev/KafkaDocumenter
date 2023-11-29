@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 export default function Loading() {
     const {loading} = useContext(appContext);
     return loading ? (
-        <section className="absolute z-50 w-full h-full bg-slate-900 flex justify-center items-center bg-opacity-90">
+        <section className="absolute z-50 w-full h-full bg-black flex justify-center items-center bg-opacity-90">
             <svg width="167" height="146" viewBox="0 0 167 146" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_7_2)">
                     <path d="M9.45483 134.25L83.5 6L157.545 134.25H9.45483Z" stroke="white" className="loadingIcon" strokeWidth="6" shapeRendering="crispEdges" />

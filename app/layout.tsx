@@ -4,6 +4,8 @@ import './globals.css'
 import AppContextProvider from '@/context/AppContext';
 import SideBar from '@/components/SideBar';
 import Loading from '@/components/Loading';
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Menu/Navbar';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,10 +20,11 @@ export default function RootLayout({
       <body suppressHydrationWarning={true} className={inter.className}>
         <AppContextProvider>
           <Loading></Loading>
-          <div className='flex overflow-x-hidden flex-nowrap min-h-screen w-auto bg-slate-900'>
-            <SideBar></SideBar>
-            <main className='w-full p-2 relative'>
+          <div className='flex overflow-x-hidden flex-nowrap min-h-screen w-auto bg-black'>
+            <SideBar/>
+            <main className='w-full relative'>
               {children}
+              <Footer/>
             </main>
           </div>
         </AppContextProvider>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import moment from 'moment';
 import classNames from 'classnames';
 import Classroom from "@/types/ServerClassroom";
-import Contributors from "@/types/ServerContributors";
+//import Contributors from "@/types/ServerContributors";
 import Contributor from "@/types/ServerContributor";
 import Author from '@/components/Author';
 import Link from 'next/link'
@@ -21,8 +21,7 @@ const ClassroomBar: React.FC<Classroom> = ({id, title,
     const [autor_prop, setAutor] = useState<Contributor[]>(authors || []);
     const dynamicBackgroundColor = getRandomColor();
    
-    const componentClasses = classNames(
-      
+    const componentClasses = classNames(      
         'shadow-lg',
         'sha',
         'text-white',
@@ -47,16 +46,11 @@ const ClassroomBar: React.FC<Classroom> = ({id, title,
 
         <Link href={`/classroom/${title_prop}`} className={componentClasses} key={id_prop}>
           <header className='flex items-center gap-'>
-          <h1 className='text-xl'> <b>{title_prop}</b></h1>
-    
-        
+            <h1 className='text-xl'> <b>{title_prop}</b></h1> 
           </header>
     
         <section className='w-full  flex-1 flex flex-col'>
-     
-   
           <div className='text-sm'>
-
             <p className='whitespace-nowrap w-full text-ellipsis overflow-hidden py-5'>{description_prop}</p>
           </div>
        
